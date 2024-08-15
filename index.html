@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input,
+        select,
+        button {
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body style="background-color: rgb(129, 89, 62);">
+    <div style="width: 35%;position: relative;left: 430px;top: 100px; border: 2px solid black; height: 40vh; ">
+        <h1 style="text-align: center;">Temprature Converter</h1>
+        <div style="background-color: teal; border: 2px solid black; display: flex;">
+            <input id="temp" type="number" placeholder="Enter values" />
+            <select id="input">
+                <option value="Celsius">Celsius</option>
+                <option value="Fahrenheit">Fahrenheit</option>
+                <option value="Kelvin">Kelvin</option>
+            </select>
+            <select id="output_1">
+                <option value="Celsius">Celsius</option>
+                <option value="Fahrenheit">Fahrenheit</option>
+                <option value="Kelvin">Kelvin</option>
+            </select>
+        </div>
+        <div>
+            <h3>Result:</h1>
+                <div style="color: rgb(19, 18, 18);font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;" id="output"></div>
+        </div>
+        <button id="convert_btn" style="background-color: rgb(231, 13, 5); border-radius: 10px;position: relative;left: 200px;">Convert</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
