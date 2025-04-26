@@ -2,43 +2,128 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        input,
-        select,
-        button {
-            margin: 10px;
-            padding: 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Temperature Converter</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .converter-container {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 420px;
+    }
+
+    .converter-container h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      color: #111;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 25px;
+    }
+
+    input,
+    select {
+      padding: 12px 14px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    .result-section {
+      margin-top: 20px;
+    }
+
+    .result-section h3 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+
+    #output {
+      padding: 12px;
+      background-color: #f0f0f0;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      text-align: center;
+      color: #222;
+    }
+
+    .convert-btn {
+      width: 100%;
+      padding: 14px;
+      background-color: #111;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .convert-btn:hover {
+      background-color: #333;
+    }
+
+    @media (max-width: 480px) {
+      .converter-container {
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 
-<body style="background-color: rgb(129, 89, 62);">
-    <div style="width: 35%;position: relative;left: 430px;top: 100px; border: 2px solid black; height: 40vh; ">
-        <h1 style="text-align: center;">Temprature Converter</h1>
-        <div style="background-color: teal; border: 2px solid black; display: flex;">
-            <input id="temp" type="number" placeholder="Enter values" />
-            <select id="input">
-                <option value="Celsius">Celsius</option>
-                <option value="Fahrenheit">Fahrenheit</option>
-                <option value="Kelvin">Kelvin</option>
-            </select>
-            <select id="output_1">
-                <option value="Celsius">Celsius</option>
-                <option value="Fahrenheit">Fahrenheit</option>
-                <option value="Kelvin">Kelvin</option>
-            </select>
-        </div>
-        <div>
-            <h3>Result:</h1>
-                <div style="color: rgb(19, 18, 18);font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;" id="output"></div>
-        </div>
-        <button id="convert_btn" style="background-color: rgb(231, 13, 5); border-radius: 10px;position: relative;left: 200px;">Convert</button>
+<body>
+
+  <div class="converter-container">
+    <h1>Temperature Converter</h1>
+
+    <div class="input-group">
+      <input id="temp" type="number" placeholder="Enter value">
+      <select id="input">
+        <option value="Celsius">Celsius</option>
+        <option value="Fahrenheit">Fahrenheit</option>
+        <option value="Kelvin">Kelvin</option>
+      </select>
+      <select id="output_1">
+        <option value="Celsius">Celsius</option>
+        <option value="Fahrenheit">Fahrenheit</option>
+        <option value="Kelvin">Kelvin</option>
+      </select>
     </div>
 
-    <script src="app.js"></script>
+    <button id="convert_btn" class="convert-btn">Convert</button>
+
+    <div class="result-section">
+      <h3>Result:</h3>
+      <div id="output">--</div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 
 </html>
